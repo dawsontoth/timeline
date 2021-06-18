@@ -1,0 +1,18 @@
+@import '../utils/styles';
+
+.clock {
+	width: 100%;
+	height: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.time {
+	color: white;
+	opacity: 0.5;
+	user-select: none;
+	pointer-events: none;
+	font-size: 15vw;
+	text-align: center;
+}

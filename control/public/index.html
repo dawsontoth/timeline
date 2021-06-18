@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--suppress JSUnusedGlobalSymbols -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link href="%PUBLIC_URL%/favicon.ico" rel="icon" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="script-src 'self' 'unsafe-inline';" http-equiv="Content-Security-Policy">
+        <meta content="#000000" name="theme-color" />
+        <meta content="Control" name="description" />
+        <script>
+            const fs = require('fs');
+            const path = require('path');
+            const electron = require('electron');
+            const ipc = electron.ipcRenderer;
+            const userData = electron.remote.app.getPath('userData');
+        </script>
+        <link href="./fontawesome/css/all.css" rel="stylesheet" />
+        <link href="%PUBLIC_URL%/logo192.png" rel="apple-touch-icon" />
+        <link href="%PUBLIC_URL%/manifest.json" rel="manifest" />
+        <title>Order of Events</title>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+    </body>
+</html>
