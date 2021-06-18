@@ -13,8 +13,3 @@ export function App() {
   );
 }
 
-// Clock
-// Advancing timeline
-// Countdown to next event
-// Observe Livestream Studio through remote API
-// Control Livestream Studio through remote API
