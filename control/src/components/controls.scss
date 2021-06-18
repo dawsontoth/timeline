@@ -1,0 +1,23 @@
+@import '../utils/styles';
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.controls {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: $color-dark-transparent;
+	color: $color-white;
+	text-align: center;
+	border-top: 1px solid $color-light;
+	border-left: 1px solid $color-light;
+	user-select: none;
+
+	button {
+		font-size: 1em;
+		padding: 6px 12px;
+
+		&:hover {
+			background-color: $color-action;
+		}
+	}
+}

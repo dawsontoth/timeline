@@ -1,7 +1,7 @@
 @import '../utils/styles';
 
 .timeline {
-	padding: $clock-height + $gutter 0 $gutter;
+	padding: $clock-height + $gutter 0;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	list-style-type: none;
