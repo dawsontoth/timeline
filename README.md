@@ -1,12 +1,17 @@
+
 # Timeline
 
-This [Electron](https://www.electronjs.org) app displays a timeline of events, automatically tracking and allowing tasks to be marked as completed. 
+This [Electron](https://www.electronjs.org) app displays a timeline of events, automatically tracking and allowing tasks to be marked as
+completed.
 
 **Clone and run for a quick way to see it in action.**
 
+![Example of a timeline displayed in this app](./example.png)
+
 ## To Use
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes
+with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
