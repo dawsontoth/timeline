@@ -1,18 +1,17 @@
 @import '../utils/styles';
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 .clock {
-	width: 100%;
-	height: 30%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.time {
-	color: white;
-	opacity: 0.5;
-	user-select: none;
-	pointer-events: none;
-	font-size: 15vw;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: $clock-height;
+	font-size: 6em;
+	font-family: 'VT323', monospace;
+	background-color: $color-dark-transparent;
+	color: $color-white;
 	text-align: center;
+	border-bottom: 1px solid $color-light;
+	user-select: none;
 }
