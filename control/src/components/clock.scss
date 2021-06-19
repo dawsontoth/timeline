@@ -7,11 +7,15 @@
 	right: 0;
 	left: 0;
 	height: $clock-height;
-	font-size: 6em;
+	font-size: 5em;
 	font-family: 'VT323', monospace;
 	background-color: $color-dark-transparent;
 	color: $color-white;
 	text-align: center;
 	border-bottom: 1px solid $color-light;
 	user-select: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
 }
