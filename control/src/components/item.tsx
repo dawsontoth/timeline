@@ -40,12 +40,12 @@ export function Item({ item }: { item: IItem }) {
       }
       onClick={ complete }
     >
-      <i className={ "item-status fal fa-" + (completed ? "check-" : "") + "circle" } />
-      <div className="message"
-           dangerouslySetInnerHTML={ { __html: item.message } } />
-      <div className="delta">
+      <div className="item-status">
+        { completed && <i className="fal fa-check-circle" /> }
         { formatMilliseconds(delta) }
       </div>
+      <div className="message"
+           dangerouslySetInnerHTML={ { __html: item.message } } />
     </li>
   );
 }

@@ -16,15 +16,6 @@
 	align-items: center;
 
 	.item-status {
-		padding: $gutter;
-	}
-
-	.message {
-		padding: $gutter/2 $gutter $gutter/2 0;
-		flex: 1;
-	}
-
-	.delta {
 		width: 120px;
 		align-self: stretch;
 		display: flex;
@@ -32,6 +23,11 @@
 		justify-content: center;
 		font-family: 'VT323', monospace;
 		font-size: 1.3em;
+	}
+
+	.message {
+		padding: $gutter/2 $gutter $gutter/2 0;
+		flex: 1;
 	}
 
 	&.late {
