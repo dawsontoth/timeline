@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-<!--suppress JSUnusedGlobalSymbols -->
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link href="%PUBLIC_URL%/favicon.ico" rel="icon" />
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="script-src 'self' 'unsafe-inline';" http-equiv="Content-Security-Policy">
-        <meta content="#000000" name="theme-color" />
-        <meta content="Control" name="description" />
-        <script>
-            const fs = require('fs');
-            const path = require('path');
-            const electron = require('electron');
-            const ipc = electron.ipcRenderer;
-            const userData = electron.remote.app.getPath('userData');
-        </script>
-        <link href="./fontawesome/css/all.css" rel="stylesheet" />
-        <link href="%PUBLIC_URL%/logo192.png" rel="apple-touch-icon" />
-        <link href="%PUBLIC_URL%/manifest.json" rel="manifest" />
-        <title>Order of Events</title>
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-    </body>
+<head>
+	<meta charset="utf-8" />
+	<link href="%PUBLIC_URL%/favicon.ico" rel="icon" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta content="script-src 'self' 'unsafe-inline';" http-equiv="Content-Security-Policy">
+	<meta content="#000000" name="theme-color" />
+	<link href="./fontawesome/css/all.css" rel="stylesheet" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0099ff">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<title>Timeline</title>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+</body>
 </html>
