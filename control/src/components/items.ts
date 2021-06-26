@@ -3,6 +3,7 @@ import { atMinutesToDiff, formatMilliseconds } from './time';
 
 export interface IItem {
   message: string;
+  image?: string;
   atMinutes?: number;
   afterMinutes?: number;
 

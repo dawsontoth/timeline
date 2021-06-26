@@ -30,8 +30,18 @@ export function Item({ item }: { item: IItem }) {
       onClick={ item.toggleCompleted }
     >
       <div className="item-status">
-        { !completed && delta }
-        { completed && <i className="fal fa-check-circle" /> }
+        { completed
+          ? <i className="fal fa-check-circle" />
+          : delta
+            ? delta
+            : item.image
+              ? <a
+                className="fal fa-question-circle item-image"
+                target="_blank"
+                href={ item.image }
+              />
+              : undefined
+        }
       </div>
       <div className="message"
            dangerouslySetInnerHTML={ { __html: item.message } } />
