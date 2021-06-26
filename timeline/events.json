@@ -1,0 +1,77 @@
+[
+  {
+    "message": "Open Livestream Studio.",
+    "image": "/timeline/open-livestream-studio.png"
+  },
+  {
+    "message": "Double tap <strong>Black</strong> source to output.",
+    "image": "/timeline/output-black.png"
+  },
+  {
+    "message": "Push <strong>GFX 2</strong> and verify the logo is displaying.",
+    "image": "/timeline/push-logo.png"
+  },
+  {
+    "message": "Set title for this week in 2 places, and time of next service, then hit <strong>Update</strong> button.",
+    "image": "/timeline/title-and-update.png"
+  },
+  {
+    "message": "Make sure <strong>Names</strong> tab is ready for whomever is speaking today.",
+    "image": "/timeline/names.png"
+  },
+  {
+    "atMinutes": 50,
+    "message": "Hit <strong>GO LIVE</strong> button in top left or lower right.",
+    "image": "/timeline/go-live.png"
+  },
+  {
+    "relativeToIndex": 5,
+    "afterMinutes": 0,
+    "message": "Double tap <strong>Intro</strong> source to output.",
+    "image": "/timeline/output-intro.png"
+  },
+  {
+    "relativeToIndex": 5,
+    "afterMinutes": 0,
+    "message": "Single tap <strong>Cameras</strong> source to preview.",
+    "image": "/timeline/preview-cameras.png"
+  },
+  {
+    "relativeToIndex": 5,
+    "afterMinutes": 0,
+    "message": "Check that the stream started OK on Vimeo, YT and FB.",
+    "image": "/timeline/check-stream.png"
+  },
+  {
+    "relativeToIndex": 5,
+    "afterMinutes": 5,
+    "message": "When countdown begins, double tap <strong>Cameras</strong> to output.",
+    "image": "/timeline/output-cameras.png"
+  },
+  {
+    "relativeToIndex": 5,
+    "afterMinutes": 10,
+    "message": "Have fun! Mistakes happen, just roll with it."
+  },
+  {
+    "message": "When stream viewers are dismissed, double tap on <strong>Outro</strong> source to output.",
+    "image": "/timeline/outro.png"
+  },
+  {
+    "relativeToIndex": 11,
+    "afterMinutes": 0,
+    "message": "Single tap on <strong>BLACK</strong> source to preview.",
+    "image": "/timeline/preview-black.png"
+  },
+  {
+    "relativeToIndex": 11,
+    "afterMinutes": 0,
+    "message": "After in-person ends, ensure <strong>Projector</strong> is going out to the building."
+  },
+  {
+    "relativeToIndex": 11,
+    "afterMinutes": 10,
+    "message": "When the timer hits 0, stop streaming by tapping red <strong>STREAMING</strong> button.",
+    "image": "/timeline/end.png"
+  }
+]
