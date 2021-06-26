@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { MouseEvent, useEffect, useState } from 'react';
 import { IItem } from './items';
 
 export function Item({ item }: { item: IItem }) {
@@ -39,6 +39,7 @@ export function Item({ item }: { item: IItem }) {
                 className="fal fa-question-circle item-image"
                 target="_blank"
                 rel="noreferrer"
+                onClick={ stopPropagation }
                 href={ item.image }
               ><span className="sr-only">Help</span></a>
               : undefined
@@ -49,3 +50,8 @@ export function Item({ item }: { item: IItem }) {
     </li>
   );
 }
+
+function stopPropagation(e: MouseEvent) {
+  e.stopPropagation();
+}
+
