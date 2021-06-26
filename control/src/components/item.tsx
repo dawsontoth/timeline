@@ -38,8 +38,9 @@ export function Item({ item }: { item: IItem }) {
               ? <a
                 className="fal fa-question-circle item-image"
                 target="_blank"
+                rel="noreferrer"
                 href={ item.image }
-              />
+              ><span className="sr-only">Help</span></a>
               : undefined
         }
       </div>
