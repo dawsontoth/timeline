@@ -1,24 +1,31 @@
-import React, { useEffect } from "react";
-import { Item } from "./item";
-import { items } from "./items";
-import "./timeline.scss";
+import React from 'react';
+import { Item } from './item';
+import { useItems } from './items';
+import './timeline.scss';
 
 export function Timeline() {
-  useEffect(() => {
-    const timer = setInterval(() => {
-      items.forEach(item => {
-        item.tick?.();
-      });
-    }, 1000 / 60);
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+  const { isLoading, error, data: items } = useItems();
+
+  if (isLoading) {
+    return <ul className="timeline">
+      <li className="item">
+        <div className="item-status">Loading...</div>
+      </li>
+    </ul>;
+  }
+
+  if (error || !items) {
+    return <ul className="timeline">
+      <li className="item">
+        <div className="item-status">{ error || 'Failed to load items!' }</div>
+      </li>
+    </ul>;
+  }
 
   return (
     <ul className="timeline">
       { items.map((item, index) => (
-        <Item item={ item } key={ index } />
+        <Item key={ index } item={ item } />
       )) }
     </ul>
   );

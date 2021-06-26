@@ -70,3 +70,13 @@ button:focus {
 .icon-depict {
 	right: 10%;
 }
+
+.late {
+	animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+	50% {
+		background-color: $color-very-negative;
+	}
+}

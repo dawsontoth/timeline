@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
-import "./clock.scss";
+import React, { useEffect, useState } from 'react';
+import './clock.scss';
+import { useUpcomingDelta } from './upcoming-delta';
 
 export function Clock() {
-  const [time, setTime] = useState("");
+  const [time, setTime] = useState('');
+  const { delta, late } = useUpcomingDelta();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -15,8 +17,8 @@ export function Clock() {
   }, []);
 
   return (
-    <div className="clock">
-      { time }
+    <div className={ 'clock' + (late ? ' late' : '') }>
+      { delta || time }
     </div>
   );
 }

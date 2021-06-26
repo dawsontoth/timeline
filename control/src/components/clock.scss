@@ -18,4 +18,8 @@
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
+
+	&.late {
+		background-color: $color-negative;
+	}
 }
