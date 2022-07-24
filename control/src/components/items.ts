@@ -1,10 +1,10 @@
 import { useQuery } from 'react-query';
-import { atMinutesToDiff, formatMilliseconds } from './time';
+import { atTimeToDiff, formatMilliseconds } from './time';
 
 export interface IItem {
   message: string;
   image?: string;
-  atMinutes?: number;
+  atTime?: number;
   afterMinutes?: number;
 
   late?: boolean;
@@ -20,15 +20,13 @@ export interface IItem {
   updated: Array<() => void>;
 }
 
-// TODO: Observe Livestream Studio through remote API
-// TODO: Control Livestream Studio through remote API
-
 export function useItems() {
   return useQuery<IItem[], Error>('timeline-items', async () => {
     const res = await fetch('/timeline/events.json');
     const items: IItem[] = await res.json();
 
-    for (const item of items) {
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
       item.completed = false;
       item.updated = [];
       item.toggleCompleted = () => {
@@ -37,7 +35,7 @@ export function useItems() {
         item.updated.forEach(updated => updated());
       };
       if (item.relativeToIndex !== undefined) {
-        item.relativeTo = items[item.relativeToIndex];
+        item.relativeTo = items[i + item.relativeToIndex];
       }
     }
 
@@ -49,8 +47,8 @@ export function useItems() {
         item.delta = undefined;
 
         if (item.completed) {
-        } else if (item.atMinutes) {
-          const diff = atMinutesToDiff(item.atMinutes);
+        } else if (item.atTime) {
+          const diff = atTimeToDiff(item.atTime);
           item.late = diff > 0;
           item.delta = formatMilliseconds(diff);
         } else if (item.afterMinutes !== undefined && item.relativeTo?.completed) {

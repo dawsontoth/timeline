@@ -1,6 +1,8 @@
-export function atMinutesToDiff(atMinutes: number): number {
+export function atTimeToDiff(atTime: number): number {
+  const hour = atTime / 100 | 0;
+  const minutes = atTime % 100;
   const now = new Date();
-  const atDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours(), atMinutes, 0, 0);
+  const atDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hour, minutes, 0, 0);
   return now.getTime() - atDate.getTime();
 }
 
