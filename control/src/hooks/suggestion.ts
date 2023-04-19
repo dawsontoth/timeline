@@ -41,7 +41,7 @@ export function useSuggestion(): [IPrimarySecondary] {
 			matches = names.search<string>(currentInput.primary);
 			if (matches.length) {
 				const firstResult = matches[0];
-				const parts = firstResult.matches[0].value.split('/');
+				const parts = firstResult.matches?.[0].value?.split('/') || [];
 				const result = { ...currentInput };
 				result.primary = parts[0];
 				if (parts[1]) {
@@ -72,8 +72,8 @@ export function useSuggestion(): [IPrimarySecondary] {
 			}
 			matches = books.search<string>(search);
 			if (matches.length) {
-				const match = matches[0].matches[0];
-				const value = match.value;
+				const match = matches?.[0].matches?.[0];
+				const value = match?.value;
 				const suffix = (value && reference ? ' ' : '')
 					+ (reference ? reference.slice(1).join(':') : '');
 				const result = { ...currentInput };
@@ -98,7 +98,6 @@ function fuse(storedValue: string) {
 			threshold: 0.7,
 			location: 0,
 			distance: 50,
-			maxPatternLength: 32,
 			minMatchCharLength: 1,
 		},
 	);

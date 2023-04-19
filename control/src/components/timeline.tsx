@@ -17,7 +17,7 @@ export function Timeline() {
   if (error || !items) {
     return <ul className="timeline">
       <li className="item">
-        <div className="item-status">{ error || 'Failed to load items!' }</div>
+        <div className="item-status">{ error ? String(error) : 'Failed to load items!' }</div>
       </li>
     </ul>;
   }
